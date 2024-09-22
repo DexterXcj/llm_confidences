@@ -1,0 +1,5 @@
+venv
+src/config.yaml
+src/processed
+raw
+.DS_Store
