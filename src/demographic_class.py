@@ -138,7 +138,7 @@ class QuizLikeDatasetProcessor_DemographicClass:
         8. <Only Option Letter >
         9. <Only Option Letter >
         10. <Only Option Letter >
-        \n."""
+        \n"""
         
         return self._create_quiz_prompts(front_prompt, back_prompt)
 
@@ -162,7 +162,7 @@ class QuizLikeDatasetProcessor_DemographicClass:
         9. <Only Option Letter >
         10. <Only Option Letter >
         Estimate how many questions you can answer correctly: <only choose one number from 0-10>.
-        \n."""
+        \n"""
         
         return self._create_quiz_prompts(front_prompt, back_prompt)
 
