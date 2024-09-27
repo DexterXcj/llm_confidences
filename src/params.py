@@ -1,5 +1,5 @@
 # Define parameters
-ages = ["Young Adult", "Middle-aged", "Senior"]
+ages = ["18-24", "25-39", "40-54", '55+']
 genders = ["Male", "Female", "Non-binary individual"]
 races = ["White", "Black", "Asian", "Hispanic"]
 
