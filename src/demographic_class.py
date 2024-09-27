@@ -126,7 +126,7 @@ class QuizLikeDatasetProcessor_DemographicClass:
             raise ValueError(f"Unknown experiment type: {self.experiment_type}")
 
     def prompt_create_demographic_quiz_answer_only(self):
-        front_prompt = f"You are a {self.race} {self.gender} {self.age}. Read the question and provide your answer (only the option letter). Do not provide any explanation.\nQuestions:\n"
+        front_prompt = f"You are a {self.age} {self.race} {self.gender}. Read the question and provide your answer (only the option letter). Do not provide any explanation.\nQuestions:\n"
         back_prompt = """Now, please answer these questions:
         1. <Only Option Letter >
         2. <Only Option Letter >
@@ -143,13 +143,13 @@ class QuizLikeDatasetProcessor_DemographicClass:
         return self._create_quiz_prompts(front_prompt, back_prompt)
 
     def prompt_create_demographic_quiz_estimation_only(self):
-        front_prompt = f"You are a {self.race} {self.gender} {self.age}. Read the question, estimate how many questions you can answer correctly (choose a number from 0-10). Do not provide any explanation.\nQuestions:\n"
+        front_prompt = f"You are a {self.age} {self.race} {self.gender}. Read the question, estimate how many questions you can answer correctly (choose a number from 0-10). Do not provide any explanation.\nQuestions:\n"
         back_prompt = "Estimate how many questions you can answer correctly: <only choose one number from 0-10>.\n"
         
         return self._create_quiz_prompts(front_prompt, back_prompt)
 
     def prompt_create_demographic_quiz_answer_estimation(self):
-        front_prompt = f"A is a {self.race} {self.gender} {self.age}. Read the question, consider A’s information, and then guess A’s answer (provide only the option letter). Do not provide any explanation. Finally, estimate how many questions (0-10) you think A can answer correctly.\nQuestions:\n"
+        front_prompt = f"A is a {self.age} {self.race} {self.gender}. Read the question, consider A’s information, and then guess A’s answer (provide only the option letter). Do not provide any explanation. Finally, estimate how many questions (0-10) you think A can answer correctly.\nQuestions:\n"
         back_prompt = """Now, please answer these questions in the following format:
         1. <Only Option Letter >
         2. <Only Option Letter >
